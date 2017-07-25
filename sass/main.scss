@@ -1,0 +1,112 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.board-container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+
+}
+.headline{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+
+
+
+}
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.status span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background: #6666ff;
+    border-radius: 10px;
+    color: white;
+    width: 500px;
+    height: 60px;
+    font-size: 30px;
+
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 130px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 130px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+
+////////////////////////////////////////////////////////
+///background
+///////////////////////////////////////////////////////
+
+
+.background-shadow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:70vw;
+    height: 90vh;
+    background-color: rgba(0, 0, 26, 0.25);
+    border-radius: 10px;
+
+
+}
+
+.background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/background.jpg');
+}
