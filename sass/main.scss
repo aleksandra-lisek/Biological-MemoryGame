@@ -59,7 +59,7 @@ ol, ul {
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 130px;
+  height: 10px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
@@ -109,4 +109,20 @@ ol, ul {
     width: 100vw;
     height: 100vh;
     background-image: url('../images/background.jpg');
+}
+
+
+/////////////////////////////////////////
+//entrance
+///////////////////////////////////////
+
+/////background
+
+.background-entrance{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/entranceBackground.jpg');
 }

@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Game from './game.jsx';
-
 
 
 document.addEventListener('DOMContentLoaded', function(){
 
-    class ShadowBackground extends React.Component{
+    class EntranceShadowBackground extends React.Component{
         constructor() {
         super();
         this.state = {
@@ -16,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function(){
       render() {
         return (
           <div >
-              <Game/>
           </div>
         );
       }
@@ -24,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
 
-    class Background extends React.Component {
+    class EntranceBackground extends React.Component {
        constructor() {
        super();
        this.state = {
@@ -32,9 +29,9 @@ document.addEventListener('DOMContentLoaded', function(){
      }
      render() {
        return (
-         <div className="background">
+         <div className="background-entrance">
              <div className="background-shadow">
-             <ShadowBackground/>
+             <EntranceShadowBackground/>
              </div>
          </div>
        );
@@ -45,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function(){
     class App extends React.Component {
         render(){
             return <div>
-                <Background/>
+                <EntranceBackground/>
             </div>
 
         }
@@ -57,6 +54,6 @@ document.addEventListener('DOMContentLoaded', function(){
       document.getElementById('app')
     );
 
-    let result = ['January', 'February', 'March'][Math.floor(Math.random() * 3)];
+
 
 });
