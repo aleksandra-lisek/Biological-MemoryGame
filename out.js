@@ -9759,6 +9759,10 @@ var _reactDom = __webpack_require__(98);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _gameBackground = __webpack_require__(184);
+
+var _gameBackground2 = _interopRequireDefault(_gameBackground);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -9781,9 +9785,13 @@ document.addEventListener('DOMContentLoaded', function () {
             key: 'render',
             value: function render() {
                 return _react2.default.createElement(
-                    'span',
+                    'div',
                     { className: 'ent-headline' },
-                    'MEMORY GAME'
+                    _react2.default.createElement(
+                        'span',
+                        null,
+                        'MEMORY GAME'
+                    )
                 );
             }
         }]);
@@ -9791,57 +9799,8 @@ document.addEventListener('DOMContentLoaded', function () {
         return EntranceHeadline;
     }(_react2.default.Component);
 
-    var EntranceBtns = function (_React$Component2) {
-        _inherits(EntranceBtns, _React$Component2);
-
-        function EntranceBtns() {
-            _classCallCheck(this, EntranceBtns);
-
-            return _possibleConstructorReturn(this, (EntranceBtns.__proto__ || Object.getPrototypeOf(EntranceBtns)).apply(this, arguments));
-        }
-
-        _createClass(EntranceBtns, [{
-            key: 'render',
-            value: function render() {
-                return _react2.default.createElement(
-                    'div',
-                    { className: 'ent-btns' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'gen-btn ent-btn' },
-                        _react2.default.createElement(
-                            'span',
-                            null,
-                            'Genetyka'
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'anat-btn ent-btn' },
-                        _react2.default.createElement(
-                            'span',
-                            null,
-                            'Anatomia'
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'cell-btn ent-btn' },
-                        _react2.default.createElement(
-                            'span',
-                            null,
-                            'Biologia kom\xF3rki'
-                        )
-                    )
-                );
-            }
-        }]);
-
-        return EntranceBtns;
-    }(_react2.default.Component);
-
-    var EntranceParagraph = function (_React$Component3) {
-        _inherits(EntranceParagraph, _React$Component3);
+    var EntranceParagraph = function (_React$Component2) {
+        _inherits(EntranceParagraph, _React$Component2);
 
         function EntranceParagraph() {
             _classCallCheck(this, EntranceParagraph);
@@ -9882,16 +9841,22 @@ document.addEventListener('DOMContentLoaded', function () {
         return EntranceParagraph;
     }(_react2.default.Component);
 
-    var EntranceShadowBackground = function (_React$Component4) {
-        _inherits(EntranceShadowBackground, _React$Component4);
+    var EntranceShadowBackground = function (_React$Component3) {
+        _inherits(EntranceShadowBackground, _React$Component3);
 
         function EntranceShadowBackground() {
             _classCallCheck(this, EntranceShadowBackground);
 
-            var _this4 = _possibleConstructorReturn(this, (EntranceShadowBackground.__proto__ || Object.getPrototypeOf(EntranceShadowBackground)).call(this));
+            var _this3 = _possibleConstructorReturn(this, (EntranceShadowBackground.__proto__ || Object.getPrototypeOf(EntranceShadowBackground)).call(this));
 
-            _this4.state = {};
-            return _this4;
+            _this3.handleGame = function () {
+                if (typeof _this3.props.onGame === 'function') {
+                    _this3.props.onGame();
+                }
+            };
+
+            _this3.state = {};
+            return _this3;
         }
 
         _createClass(EntranceShadowBackground, [{
@@ -9902,7 +9867,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     { className: 'content' },
                     _react2.default.createElement(EntranceHeadline, null),
                     _react2.default.createElement(EntranceParagraph, null),
-                    _react2.default.createElement(EntranceBtns, null)
+                    _react2.default.createElement(EntranceBtns, { onGame: this.handleGame })
                 );
             }
         }]);
@@ -9910,16 +9875,22 @@ document.addEventListener('DOMContentLoaded', function () {
         return EntranceShadowBackground;
     }(_react2.default.Component);
 
-    var EntranceBackground = function (_React$Component5) {
-        _inherits(EntranceBackground, _React$Component5);
+    var EntranceBackground = function (_React$Component4) {
+        _inherits(EntranceBackground, _React$Component4);
 
         function EntranceBackground() {
             _classCallCheck(this, EntranceBackground);
 
-            var _this5 = _possibleConstructorReturn(this, (EntranceBackground.__proto__ || Object.getPrototypeOf(EntranceBackground)).call(this));
+            var _this4 = _possibleConstructorReturn(this, (EntranceBackground.__proto__ || Object.getPrototypeOf(EntranceBackground)).call(this));
 
-            _this5.state = {};
-            return _this5;
+            _this4.handleGame = function () {
+                if (typeof _this4.props.onGame === 'function') {
+                    _this4.props.onGame();
+                }
+            };
+
+            _this4.state = {};
+            return _this4;
         }
 
         _createClass(EntranceBackground, [{
@@ -9931,7 +9902,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     _react2.default.createElement(
                         'div',
                         { className: 'background-shadow' },
-                        _react2.default.createElement(EntranceShadowBackground, null)
+                        _react2.default.createElement(EntranceShadowBackground, { onGame: this.handleGame })
                     )
                 );
             }
@@ -9940,23 +9911,90 @@ document.addEventListener('DOMContentLoaded', function () {
         return EntranceBackground;
     }(_react2.default.Component);
 
+    var EntranceBtns = function (_React$Component5) {
+        _inherits(EntranceBtns, _React$Component5);
+
+        function EntranceBtns(props) {
+            var _temp, _this5;
+
+            _classCallCheck(this, EntranceBtns);
+
+            (_temp = (_this5 = _possibleConstructorReturn(this, (EntranceBtns.__proto__ || Object.getPrototypeOf(EntranceBtns)).call(this, props)), _this5), _this5.handleButtonClick = function () {
+                if (typeof _this5.props.onGame === 'function') {
+                    _this5.props.onGame();
+                }
+            }, _temp), _this5.state = {};
+            return _this5;
+        }
+
+        _createClass(EntranceBtns, [{
+            key: 'render',
+            value: function render() {
+                return _react2.default.createElement(
+                    'div',
+                    { className: 'ent-btns' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'gen-btn ent-btn', onClick: this.handleButtonClick },
+                        _react2.default.createElement(
+                            'span',
+                            null,
+                            'Genetyka'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'anat-btn ent-btn' },
+                        _react2.default.createElement(
+                            'span',
+                            null,
+                            'Anatomia'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'cell-btn ent-btn' },
+                        _react2.default.createElement(
+                            'span',
+                            null,
+                            'Biologia kom\xF3rki'
+                        )
+                    )
+                );
+            }
+        }]);
+
+        return EntranceBtns;
+    }(_react2.default.Component);
+
     var App = function (_React$Component6) {
         _inherits(App, _React$Component6);
 
         function App() {
             _classCallCheck(this, App);
 
-            return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+            var _this6 = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+            _this6.handleClickGenGame = function () {
+
+                _this6.setState({ click: true });
+                console.log(_this6.state.click);
+            };
+
+            _this6.state = {
+                click: false
+            };
+            return _this6;
         }
 
         _createClass(App, [{
             key: 'render',
             value: function render() {
-                return _react2.default.createElement(
-                    'div',
-                    null,
-                    _react2.default.createElement(EntranceBackground, null)
-                );
+                if (this.state.click === false) {
+                    return _react2.default.createElement(EntranceBackground, { onGame: this.handleClickGenGame });
+                } else {
+                    return _react2.default.createElement(_gameBackground2.default, null);
+                }
             }
         }]);
 
@@ -22601,6 +22639,273 @@ var ReactDOMInvalidARIAHook = {
 
 module.exports = ReactDOMInvalidARIAHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 184 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(82);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _game = __webpack_require__(185);
+
+var _game2 = _interopRequireDefault(_game);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ShadowBackground = function (_React$Component) {
+  _inherits(ShadowBackground, _React$Component);
+
+  function ShadowBackground() {
+    _classCallCheck(this, ShadowBackground);
+
+    var _this = _possibleConstructorReturn(this, (ShadowBackground.__proto__ || Object.getPrototypeOf(ShadowBackground)).call(this));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(ShadowBackground, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_game2.default, null)
+      );
+    }
+  }]);
+
+  return ShadowBackground;
+}(_react2.default.Component);
+
+var Background = function (_React$Component2) {
+  _inherits(Background, _React$Component2);
+
+  function Background() {
+    _classCallCheck(this, Background);
+
+    var _this2 = _possibleConstructorReturn(this, (Background.__proto__ || Object.getPrototypeOf(Background)).call(this));
+
+    _this2.state = {};
+    return _this2;
+  }
+
+  _createClass(Background, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'background' },
+        _react2.default.createElement(
+          'div',
+          { className: 'background-shadow' },
+          _react2.default.createElement(ShadowBackground, null)
+        )
+      );
+    }
+  }]);
+
+  return Background;
+}(_react2.default.Component);
+
+exports.default = Background;
+
+/***/ }),
+/* 185 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(82);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function Square(props) {
+    return _react2.default.createElement(
+        'button',
+        { className: 'square', onClick: props.onClick },
+        props.value
+    );
+}
+
+var Board = function (_React$Component) {
+    _inherits(Board, _React$Component);
+
+    function Board() {
+        _classCallCheck(this, Board);
+
+        var _this = _possibleConstructorReturn(this, (Board.__proto__ || Object.getPrototypeOf(Board)).call(this));
+
+        _this.state = {
+            squares: Array(36).fill(null)
+        };
+        return _this;
+    }
+
+    _createClass(Board, [{
+        key: 'handleClick',
+        value: function handleClick(i) {
+            console.log('tralla');
+        }
+    }, {
+        key: 'renderSquare',
+        value: function renderSquare(i) {
+            var _this2 = this;
+
+            return _react2.default.createElement(Square, { onClick: function onClick() {
+                    return _this2.handleClick(i);
+                } });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'div',
+                    { className: 'headline' },
+                    _react2.default.createElement(
+                        'span',
+                        null,
+                        'GENETYKA'
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'board-container' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'board' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'board-row' },
+                            this.renderSquare(0),
+                            this.renderSquare(1),
+                            this.renderSquare(2),
+                            this.renderSquare(0)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'board-row' },
+                            this.renderSquare(3),
+                            this.renderSquare(4),
+                            this.renderSquare(5),
+                            this.renderSquare(0)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'board-row' },
+                            this.renderSquare(6),
+                            this.renderSquare(7),
+                            this.renderSquare(8),
+                            this.renderSquare(0)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'board-row' },
+                            this.renderSquare(6),
+                            this.renderSquare(7),
+                            this.renderSquare(8),
+                            this.renderSquare(0)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'board-row' },
+                            this.renderSquare(6),
+                            this.renderSquare(7),
+                            this.renderSquare(8),
+                            this.renderSquare(0)
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'status' },
+                    _react2.default.createElement(
+                        'span',
+                        null,
+                        _react2.default.createElement(
+                            'b',
+                            null,
+                            'Liczba ruch\xF3w'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Board;
+}(_react2.default.Component);
+
+var Game = function (_React$Component2) {
+    _inherits(Game, _React$Component2);
+
+    function Game() {
+        _classCallCheck(this, Game);
+
+        var _this3 = _possibleConstructorReturn(this, (Game.__proto__ || Object.getPrototypeOf(Game)).call(this));
+
+        _this3.state = {};
+        return _this3;
+    }
+
+    _createClass(Game, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'game' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'game-board' },
+                    _react2.default.createElement(Board, null)
+                ),
+                _react2.default.createElement('div', { className: 'game-info' })
+            );
+        }
+    }]);
+
+    return Game;
+}(_react2.default.Component);
+
+// ========================================
+
+exports.default = Game;
 
 /***/ })
 /******/ ]);

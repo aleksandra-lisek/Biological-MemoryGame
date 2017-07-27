@@ -1,11 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
 
 import Game from './game.jsx';
 
 
-
-document.addEventListener('DOMContentLoaded', function(){
 
     class ShadowBackground extends React.Component{
         constructor() {
@@ -42,21 +40,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
     }
 
-    class App extends React.Component {
-        render(){
-            return <div>
-                <Background/>
-            </div>
 
-        }
-    }
 
-    ReactDOM.render(
-        <App/>,
-
-      document.getElementById('app')
-    );
-
-    let result = ['January', 'February', 'March'][Math.floor(Math.random() * 3)];
-
-});
+export default Background;
