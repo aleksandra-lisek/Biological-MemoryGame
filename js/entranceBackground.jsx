@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
         render() {
             return <div className="ent-para">
                 <span>Witaj w grze BIOLOGICAL MEMORY!</span>
-                <p>Dzięki niej połączysz przyjemnośc i edukację.</p>
-                <p>Będziesz miał okazję odpowiedzieć na pytania w trzech dzienach jak...</p>
-                <p>genetyka, anatomia oraz biologia komórkowa!</p>
+                <p>Dzięki niej połączysz przyjemność z edukacją.
+            Będziesz miał okazję odpowiedzieć na pytania w trzech dzienach jak...
+                genetyka, anatomia oraz biologia komórkowa!</p>
 
             </div>
         }
@@ -57,9 +57,13 @@ document.addEventListener('DOMContentLoaded', function() {
         render() {
             return (
                 <div className="background-entrance">
+                    <div className="cloud c-first"></div>
+                    <div className="cloud c-second"></div>
+                    <div className="cloud c-third"></div>
                     <div className="background-shadow">
                         <EntranceShadowBackground onGame={this.handleGame}/>
                     </div>
+                        <div className="lawn"></div>
                 </div>
             );
         }

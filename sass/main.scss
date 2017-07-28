@@ -57,7 +57,7 @@ ul {
     font-size: 24px;
     font-weight: bold;
     line-height: 34px;
-    height: 10px;
+    height: 130px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
@@ -89,18 +89,20 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70vw;
-    height: 90vh;
+    width: 70%;
+    height: 90%;
     background-color: rgba(0, 0, 26, 0.25);
     border-radius: 10px;
+    z-index: 6;
 }
 
 .background {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
+    position: relative;
+    width: 100%;
+    height: 100%;
     background-image: url('../images/background.jpg');
 }
 /////////////////////////////////////////
@@ -118,7 +120,8 @@ ul {
     justify-content: center;
     align-items: center;
     font-size: 7.0em;
-    font-weight: bold;
+        // font-weight: bold;
+    font-family: 'Anton', sans-serif;
 }
 
 .background-entrance {
@@ -136,19 +139,23 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Anton', sans-serif;
+    color: white;
     span{
         font-size: 4.0em;
 
     }
     p{
-        font-size: 3.0em;
+        font-size: 2.0em;
+        padding-left: 100px;
+        padding-left: 100px;
     }
 }
 
 .ent-btns {
     display: flex;
     justify-content: space-around;
-    margin-top: 17.0em;
+    margin-top: 5.0em;
 }
 
 .ent-btn {
@@ -158,25 +165,207 @@ ul {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     color: white;
     font-weight: bold;
-    font-size: 3.0em;
+    font-size: 2.0em;
     height: 50px;
     width: 25%;
-    background: #3498db;
-    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-    background-image: -o-linear-gradient(top, #3498db, #2980b9);
-    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    background: #ff0000;
+    background-image: -webkit-linear-gradient(top, #ff0000, #b30000);
+    background-image: -moz-linear-gradient(top, #ff0000, #b30000);
+    background-image: -ms-linear-gradient(top, #ff0000, #b30000);
+    background-image: -o-linear-gradient(top, #ff0000, #b30000);
+    background-image: linear-gradient(to bottom, #ff0000, #b30000);
     border-radius: 14px;
     font-family: Arial;
     text-decoration: none;
 }
 
 .ent-btn:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background: #b30000;
+  background-image: -webkit-linear-gradient(top, #b30000, #ff0000);
+  background-image: -moz-linear-gradient(top, #b30000, #ff0000);
+  background-image: -ms-linear-gradient(top, #b30000, #ff0000);
+  background-image: -o-linear-gradient(top, #b30000, #ff0000);
+  background-image: linear-gradient(to bottom, #b30000, #ff0000);
+}
+
+
+.lawn{
+    width: 100%;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    bottom: -42px;
+    z-index: 0;
+
+}
+
+.cloud{
+    background-image: url('../images/clouds.png');
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+
+}
+
+@-webkit-keyframes animateCloud1 {
+    0% {
+        margin-left: -500px;
+    }
+    100% {
+        margin-left: 800px;
+    }
+}
+
+@-moz-keyframes animateCloud1 {
+    0% {
+        margin-left: -500px;
+    }
+    100% {
+        margin-left: 800px;
+    }
+}
+
+@keyframes animateCloud1 {
+    0% {
+        margin-left: -500px;
+    }
+    100% {
+        margin-left: 800px;
+    }
+}
+
+@-webkit-keyframes animateCloud2 {
+    0% {
+        top: 100px;
+        right: 50px;
+    }
+    30% {
+        top: 100px;
+        right: -130px;
+    }
+    40%{
+        top: 100px;
+        left: 0px;
+    }
+
+    100%{
+        top: 100px;
+        left: -750px;
+    }
+}
+
+@-moz-keyframes animateCloud2 {
+    0% {
+        top: 100px;
+        right: 50px;
+    }
+    30% {
+        top: 100px;
+        right: -130px;
+    }
+    40%{
+        top: 100px;
+        left: 0px;
+    }
+
+    100%{
+        top: 100px;
+        left: 750px;
+    }
+}
+
+@keyframes animateCloud2 {
+    0% {
+        top: 100px;
+        right: 50px;
+    }
+    30% {
+        top: 100px;
+        right: -130px;
+    }
+    40%{
+        top: 100px;
+        left: 0px;
+    }
+
+    100%{
+        top: 100px;
+        left: 750px;
+    }
+}
+
+@-webkit-keyframes animateCloud3 {
+    0% {
+        margin-left: -500px;
+    }
+    100% {
+        margin-left: 1000px;
+    }
+}
+
+@-moz-keyframes animateCloud3 {
+    0% {
+        margin-left: -500px;
+    }
+    100% {
+        margin-left: 1000px;
+    }
+}
+
+@keyframes animateCloud3 {
+    0% {
+        margin-left: -500px;
+    }
+    100% {
+        margin-left: 1000px;
+    }
+}
+
+.c-first {
+    position: absolute;
+    top: 40px;
+    width: 300px;
+    height: 300px;
+    -webkit-animation: animateCloud1 35s linear infinite;
+	-moz-animation: animateCloud1 35s linear infinite;
+	animation: animateCloud1 35s linear infinite;
+
+	-webkit-transform: scale(0.80);
+	-moz-transform: scale(0.80);
+	transform: scale(0.80);
+}
+
+.c-second{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 200px;
+    height: 200px;
+
+    -webkit-animation: animateCloud2 25s linear infinite;
+	-moz-animation: animateCloud2 25s linear infinite;
+	animation: animateCloud2 25s linear infinite;
+
+	-webkit-transform: scale(0.65);
+	-moz-transform: scale(0.65);
+	transform: scale(0.65);
+
+}
+
+.c-third{
+
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    width: 250px;
+    height: 250px;
+
+    -webkit-animation: animateCloud3 15s linear infinite;
+	-moz-animation: animateCloud3 15s linear infinite;
+	animation: animateCloud3 15s linear infinite;
+
+	-webkit-transform: scale(0.65);
+	-moz-transform: scale(0.65);
+	transform: scale(0.65);
+
 }
