@@ -9900,7 +9900,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     'div',
                     { className: 'background-entrance' },
                     _react2.default.createElement('div', { className: 'cloud c-first' }),
-                    _react2.default.createElement('div', { className: 'cloud c-second' }),
+                    _react2.default.createElement('div', { className: 'c-second' }),
                     _react2.default.createElement('div', { className: 'cloud c-third' }),
                     _react2.default.createElement(
                         'div',

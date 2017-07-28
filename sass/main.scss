@@ -245,12 +245,12 @@ ul {
     }
     40%{
         top: 100px;
-        left: 0px;
+        left: -140px;
     }
 
     100%{
         top: 100px;
-        left: -750px;
+        left: 750px;
     }
 }
 
@@ -265,7 +265,7 @@ ul {
     }
     40%{
         top: 100px;
-        left: 0px;
+        left: -140px;
     }
 
     100%{
@@ -285,7 +285,7 @@ ul {
     }
     40%{
         top: 100px;
-        left: 0px;
+        left: -140px;
     }
 
     100%{
@@ -322,6 +322,8 @@ ul {
 }
 
 .c-first {
+
+
     position: absolute;
     top: 40px;
     width: 300px;
@@ -336,11 +338,14 @@ ul {
 }
 
 .c-second{
+    background-image: url('../images/ufo.png');
+    background-size: cover;
     position: absolute;
+    z-index: 0;
     top: 100px;
     right: 50px;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 150px;
 
     -webkit-animation: animateCloud2 25s linear infinite;
 	-moz-animation: animateCloud2 25s linear infinite;

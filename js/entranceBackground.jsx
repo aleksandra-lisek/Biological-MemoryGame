@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return (
                 <div className="background-entrance">
                     <div className="cloud c-first"></div>
-                    <div className="cloud c-second"></div>
+                    <div className="c-second"></div>
                     <div className="cloud c-third"></div>
                     <div className="background-shadow">
                         <EntranceShadowBackground onGame={this.handleGame}/>
