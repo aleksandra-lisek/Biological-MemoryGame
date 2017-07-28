@@ -30,11 +30,16 @@ import Game from './game.jsx';
      }
      render() {
        return (
-         <div className="background">
-             <div className="background-shadow">
-             <ShadowBackground/>
-             </div>
-         </div>
+           <div className="background-entrance">
+               <div className="cloud c-first"></div>
+               <div className="c-second"></div>
+               <div className="cloud c-third"></div>
+               <div className="background-shadow">
+                            <ShadowBackground/>
+                </div>
+                   <div className="lawn"></div>
+           </div>
+
        );
      }
 

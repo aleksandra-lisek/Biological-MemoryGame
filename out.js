@@ -22642,7 +22642,7 @@ module.exports = ReactDOMInvalidARIAHook;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -22664,59 +22664,63 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var ShadowBackground = function (_React$Component) {
-  _inherits(ShadowBackground, _React$Component);
+    _inherits(ShadowBackground, _React$Component);
 
-  function ShadowBackground() {
-    _classCallCheck(this, ShadowBackground);
+    function ShadowBackground() {
+        _classCallCheck(this, ShadowBackground);
 
-    var _this = _possibleConstructorReturn(this, (ShadowBackground.__proto__ || Object.getPrototypeOf(ShadowBackground)).call(this));
+        var _this = _possibleConstructorReturn(this, (ShadowBackground.__proto__ || Object.getPrototypeOf(ShadowBackground)).call(this));
 
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(ShadowBackground, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_game2.default, null)
-      );
+        _this.state = {};
+        return _this;
     }
-  }]);
 
-  return ShadowBackground;
+    _createClass(ShadowBackground, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(_game2.default, null)
+            );
+        }
+    }]);
+
+    return ShadowBackground;
 }(_react2.default.Component);
 
 var Background = function (_React$Component2) {
-  _inherits(Background, _React$Component2);
+    _inherits(Background, _React$Component2);
 
-  function Background() {
-    _classCallCheck(this, Background);
+    function Background() {
+        _classCallCheck(this, Background);
 
-    var _this2 = _possibleConstructorReturn(this, (Background.__proto__ || Object.getPrototypeOf(Background)).call(this));
+        var _this2 = _possibleConstructorReturn(this, (Background.__proto__ || Object.getPrototypeOf(Background)).call(this));
 
-    _this2.state = {};
-    return _this2;
-  }
-
-  _createClass(Background, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'background' },
-        _react2.default.createElement(
-          'div',
-          { className: 'background-shadow' },
-          _react2.default.createElement(ShadowBackground, null)
-        )
-      );
+        _this2.state = {};
+        return _this2;
     }
-  }]);
 
-  return Background;
+    _createClass(Background, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'background-entrance' },
+                _react2.default.createElement('div', { className: 'cloud c-first' }),
+                _react2.default.createElement('div', { className: 'c-second' }),
+                _react2.default.createElement('div', { className: 'cloud c-third' }),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'background-shadow' },
+                    _react2.default.createElement(ShadowBackground, null)
+                ),
+                _react2.default.createElement('div', { className: 'lawn' })
+            );
+        }
+    }]);
+
+    return Background;
 }(_react2.default.Component);
 
 exports.default = Background;
