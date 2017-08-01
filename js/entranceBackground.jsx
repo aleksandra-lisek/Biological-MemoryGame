@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div className="cloud c-first"></div>
                     <div className="c-second"></div>
                     <div className="cloud c-third"></div>
+                    <div className="cloud c-fourth"></div>
                     <div className="background-shadow">
                         <EntranceShadowBackground onGame={this.handleGame}/>
                     </div>

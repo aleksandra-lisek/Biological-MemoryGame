@@ -9902,6 +9902,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     _react2.default.createElement('div', { className: 'cloud c-first' }),
                     _react2.default.createElement('div', { className: 'c-second' }),
                     _react2.default.createElement('div', { className: 'cloud c-third' }),
+                    _react2.default.createElement('div', { className: 'cloud c-fourth' }),
                     _react2.default.createElement(
                         'div',
                         { className: 'background-shadow' },
@@ -22792,8 +22793,7 @@ var Square = function (_React$Component) {
         _this.state = {
             image: back,
             turned: false,
-            arrQuestions: [que1, que2, que3, que4, que5, que6, que7, que8, que9, que10],
-            arrAnswers: [answ1, answ2, answ3, answ4, answ5, answ6, answ7, answ8, answ9, answ10],
+            arrQuestions: [que1, que2, que3, que4, que5, que6, que7, que8, que9, que10, answ1, answ2, answ3, answ4, answ5, answ6, answ7, answ8, answ9, answ10],
             numOfTiles: 20,
             rowTiles: 4,
             moves: 0,
@@ -22853,71 +22853,36 @@ var Board = function (_React$Component2) {
                 null,
                 _react2.default.createElement(
                     'div',
-                    { className: 'headline' },
-                    _react2.default.createElement(
-                        'span',
-                        null,
-                        'GENETYKA'
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'board-container' },
+                    null,
                     _react2.default.createElement(
                         'div',
-                        { className: 'board' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'board-row' },
-                            this.renderSquare(0),
-                            this.renderSquare(1),
-                            this.renderSquare(2),
-                            this.renderSquare(3)
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'board-row' },
-                            this.renderSquare(4),
-                            this.renderSquare(5),
-                            this.renderSquare(6),
-                            this.renderSquare(7)
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'board-row' },
-                            this.renderSquare(8),
-                            this.renderSquare(9),
-                            this.renderSquare(10),
-                            this.renderSquare(11)
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'board-row' },
-                            this.renderSquare(12),
-                            this.renderSquare(13),
-                            this.renderSquare(14),
-                            this.renderSquare(15)
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'board-row' },
-                            this.renderSquare(16),
-                            this.renderSquare(17),
-                            this.renderSquare(18),
-                            this.renderSquare(19)
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'status' },
-                    _react2.default.createElement(
-                        'span',
                         null,
                         _react2.default.createElement(
-                            'b',
+                            'div',
+                            { className: 'headline' },
+                            _react2.default.createElement(
+                                'span',
+                                null,
+                                'GENETYKA'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'board-container' },
+                            _react2.default.createElement('div', { className: 'board' })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'status' },
+                        _react2.default.createElement(
+                            'span',
                             null,
-                            'Liczba ruch\xF3w'
+                            _react2.default.createElement(
+                                'b',
+                                null,
+                                'Liczba ruch\xF3w'
+                            )
                         )
                     )
                 )

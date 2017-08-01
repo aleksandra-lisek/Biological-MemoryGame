@@ -39,9 +39,7 @@ class Square extends React.Component {
                 que7,
                 que8,
                 que9,
-                que10
-            ],
-            arrAnswers: [
+                que10,
                 answ1,
                 answ2,
                 answ3,
@@ -104,44 +102,14 @@ class Board extends React.Component {
 
     render() {
 
-        return (
+        return     <div>
+        <div>
             <div>
                 <div className='headline'>
                     <span>GENETYKA</span>
                 </div>
                 <div className="board-container">
                     <div className='board'>
-
-                        <div className="board-row">
-                            {this.renderSquare(0)}
-                            {this.renderSquare(1)}
-                            {this.renderSquare(2)}
-                            {this.renderSquare(3)}
-
-                        </div>
-                        <div className="board-row">
-                            {this.renderSquare(4)}
-                            {this.renderSquare(5)}
-                            {this.renderSquare(6)}
-                            {this.renderSquare(7)}
-                        </div>
-                        <div className="board-row">
-                            {this.renderSquare(8)}
-                            {this.renderSquare(9)}
-                            {this.renderSquare(10)}
-                            {this.renderSquare(11)}
-                        </div>
-                        <div className="board-row">
-                            {this.renderSquare(12)}
-                            {this.renderSquare(13)}
-                            {this.renderSquare(14)}
-                            {this.renderSquare(15)}
-                        </div>
-                        <div className="board-row">
-                            {this.renderSquare(16)}
-                            {this.renderSquare(17)}
-                            {this.renderSquare(18)}
-                            {this.renderSquare(19)}
                         </div>
                     </div>
                 </div>
@@ -151,7 +119,8 @@ class Board extends React.Component {
                     </span>
                 </div>
             </div>
-        );
+        </div>
+
     }
 }
 
