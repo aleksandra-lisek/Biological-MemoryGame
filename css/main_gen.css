@@ -1,18 +1,27 @@
 body {
-    padding: 10px;
+
 }
 
 .board {
-    margin:30px auto;
+
     position: relative;
-    background: #fff;
     overflow: hidden;
-    width: 705px;
-    height: 620px;
-    border: 2px solid black;
+    width: 643px;
+    height: 549px;
     border-radius: 10px;
+
+}
+
+.container{
+
+}
+
+.center{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
 }
 
 
@@ -21,9 +30,10 @@ body {
     position: absolute;
     cursor: pointer;
     float: left;
-    width: 130px;
-    height: 130px;
-    background-image: url('dna.png');
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    background-image: url('../images/dna.png');
     background-size: cover;
     border: 1px solid black;
     border-radius: 10px;
@@ -34,12 +44,7 @@ body {
     background-color: #6699ff;
 }
 
-.center{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .start_game{
     font-family: 'Anton', sans-serif;
@@ -51,24 +56,24 @@ body {
     color: white;
     font-weight: bold;
     font-size: 1.50em;
-    height: 50px;
+    height: 31px;
     width: 25%;
-    background: #6699ff;
-    background-image: -webkit-linear-gradient(top, #6699ff, #004de6);
-    background-image: -moz-linear-gradient(top, #6699ff, #004de6);
-    background-image: -ms-linear-gradient(top, #6699ff, #004de6);
-    background-image: -o-linear-gradient(top, #6699ff, #004de6);
-    background-image: linear-gradient(to bottom, #6699ff, #004de6);
+    background: #ff0000;
+    background-image: -webkit-linear-gradient(top, #ff0000, #b30000);
+    background-image: -moz-linear-gradient(top, #ff0000, #b30000);
+    background-image: -ms-linear-gradient(top, #ff0000, #b30000);
+    background-image: -o-linear-gradient(top, #ff0000, #b30000);
+    background-image: linear-gradient(to bottom, #ff0000, #b30000);
     font-family: Arial;
     text-decoration: none;
 }
 .start_game:hover {
-  background: #b30000;
-  background-image: -webkit-linear-gradient(top, #1a66ff, #6699ff);
-  background-image: -moz-linear-gradient(top, #1a66ff, #6699ff);
-  background-image: -ms-linear-gradient(top, #1a66ff, #6699ff);
-  background-image: -o-linear-gradient(top, #1a66ff, #6699ff);
-  background-image: linear-gradient(to bottom, #1a66ff, #6699ff);
+    background: #b30000;
+    background-image: -webkit-linear-gradient(top, #b30000, #ff0000);
+    background-image: -moz-linear-gradient(top, #b30000, #ff0000);
+    background-image: -ms-linear-gradient(top, #b30000, #ff0000);
+    background-image: -o-linear-gradient(top, #b30000, #ff0000);
+    background-image: linear-gradient(to bottom, #b30000, #ff0000);
 }
 
 .moves{
