@@ -1,0 +1,77 @@
+body {
+    padding: 10px;
+}
+
+.board {
+    margin:30px auto;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    width: 705px;
+    height: 620px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.tile {
+    position: absolute;
+    cursor: pointer;
+    float: left;
+    width: 130px;
+    height: 130px;
+    background-image: url('dna.png');
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.tile:hover {
+    background-color: #6699ff;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start_game{
+    font-family: 'Anton', sans-serif;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: bold;
+    font-size: 1.50em;
+    height: 50px;
+    width: 25%;
+    background: #6699ff;
+    background-image: -webkit-linear-gradient(top, #6699ff, #004de6);
+    background-image: -moz-linear-gradient(top, #6699ff, #004de6);
+    background-image: -ms-linear-gradient(top, #6699ff, #004de6);
+    background-image: -o-linear-gradient(top, #6699ff, #004de6);
+    background-image: linear-gradient(to bottom, #6699ff, #004de6);
+    font-family: Arial;
+    text-decoration: none;
+}
+.start_game:hover {
+  background: #b30000;
+  background-image: -webkit-linear-gradient(top, #1a66ff, #6699ff);
+  background-image: -moz-linear-gradient(top, #1a66ff, #6699ff);
+  background-image: -ms-linear-gradient(top, #1a66ff, #6699ff);
+  background-image: -o-linear-gradient(top, #1a66ff, #6699ff);
+  background-image: linear-gradient(to bottom, #1a66ff, #6699ff);
+}
+
+.moves{
+    font-size: 2em;
+        font-family: 'Anton', sans-serif;
+}
