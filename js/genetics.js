@@ -45,7 +45,7 @@
         }
 
 console.log(tiles);
-//tworzy się tablica z podwójnymi cyframi
+//tworzy się tablica z cyframi
 
         for (let i=numTiles-1; i>0; i--) {
             const swap = Math.floor(Math.random()*i);
@@ -79,6 +79,7 @@ console.log(tiles);
         if (canTake) {
             //jeżeli jeszcze nie pobraliśmy 1 elementu
             //lub jeżeli index tego elementu nie istnieje w pobranych...
+
             if (!takenTiles[0] || (takenTiles[0].data('index') != element.data('index'))) {
                 takenTiles.push(element); //w takim przypadku umieszczamy w tablicy
                 element.css({'background-image' : 'url('+imgTilesQue[element.data('cardType')]+')'});
@@ -86,148 +87,26 @@ console.log(tiles);
                 console.log(element);
             }
 
+
+
             if (takenTiles.length == 2) {
                 canTake = false;
-                if (takenTiles[0].data('cardType')==0 && takenTiles[1].data('cardType')==10) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                } if (takenTiles[0].data('cardType')==10 && takenTiles[1].data('cardType')==0) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                }else {
-                    window.setTimeout(function() {
-                        tilesReset();
-                    }, 1000);
-                }
 
-                if(takenTiles[0].data('cardType')==1 && takenTiles[1].data('cardType')==11) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                }  if (takenTiles[0].data('cardType')==11 && takenTiles[1].data('cardType')==1) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                }else {
-                    window.setTimeout(function() {
-                        tilesReset();
-                    }, 1000);
+                for (let i = 0; i < numTiles; i++) {
+                    if (takenTiles[0].data('cardType')==i && takenTiles[1].data('cardType')== i+10) {
+                        window.setTimeout(function() {
+                            tilesRemove();
+                        }, 800);
+                    } if (takenTiles[0].data('cardType')==i+10 && takenTiles[1].data('cardType')==i){
+                        window.setTimeout(function() {
+                            tilesRemove();
+                        }, 800);
+                    }else {
+                        window.setTimeout(function() {
+                            tilesReset();
+                        }, 1000);
+                    }
                 }
-
-                if(takenTiles[0].data('cardType')==2 && takenTiles[1].data('cardType')==12) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                } if (takenTiles[0].data('cardType')==12 && takenTiles[1].data('cardType')==2) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                }else {
-                    window.setTimeout(function() {
-                        tilesReset();
-                    }, 1000);
-                }
-
-                if(takenTiles[0].data('cardType')==3 && takenTiles[1].data('cardType')==13) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                } if (takenTiles[0].data('cardType')==13 && takenTiles[1].data('cardType')==3) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                }else {
-                    window.setTimeout(function() {
-                        tilesReset();
-                    }, 1000);
-                }
-
-                if(takenTiles[0].data('cardType')==4 && takenTiles[1].data('cardType')==14) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                } if (takenTiles[0].data('cardType')==14 && takenTiles[1].data('cardType')==4) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                }else {
-                    window.setTimeout(function() {
-                        tilesReset();
-                    }, 1000);
-                }
-
-                if (takenTiles[0].data('cardType')==5 && takenTiles[1].data('cardType')==15) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                } if (takenTiles[0].data('cardType')==15 && takenTiles[1].data('cardType')==5) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                }else {
-                    window.setTimeout(function() {
-                        tilesReset();
-                    }, 1000);
-                }
-
-                if (takenTiles[0].data('cardType')==6 && takenTiles[1].data('cardType')==16) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                }if (takenTiles[0].data('cardType')==16 && takenTiles[1].data('cardType')==6) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                } else {
-                    window.setTimeout(function() {
-                        tilesReset();
-                    }, 1000);
-                }
-
-                if (takenTiles[0].data('cardType')==7 && takenTiles[1].data('cardType')==17) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                }if (takenTiles[0].data('cardType')==17 && takenTiles[1].data('cardType')==7) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                } else {
-                    window.setTimeout(function() {
-                        tilesReset();
-                    }, 1000);
-                }
-
-                if (takenTiles[0].data('cardType')==8 && takenTiles[1].data('cardType')==18) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                }if (takenTiles[0].data('cardType')==18 && takenTiles[1].data('cardType')==8) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                } else {
-                    window.setTimeout(function() {
-                        tilesReset();
-                    }, 1000);
-                }
-
-                if (takenTiles[0].data('cardType')==9 && takenTiles[1].data('cardType')==19) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                } if (takenTiles[0].data('cardType')==19 && takenTiles[1].data('cardType')==9) {
-                    window.setTimeout(function() {
-                        tilesRemove();
-                    }, 800);
-                } else {
-                    window.setTimeout(function() {
-                        tilesReset();
-                    }, 1000);
-                }
-
                 numOfMoves++;
                 $('.moves').html(numOfMoves)
             }
