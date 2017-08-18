@@ -218,7 +218,7 @@ ul {
 
 @-webkit-keyframes animateCloud1 {
     0% {
-        margin-left: -500px;
+        margin-left: -800px;
     }
     100% {
         margin-left: 800px;
@@ -227,7 +227,7 @@ ul {
 
 @-moz-keyframes animateCloud1 {
     0% {
-        margin-left: -500px;
+        margin-left: -800px;
     }
     100% {
         margin-left: 800px;
@@ -236,14 +236,14 @@ ul {
 
 @keyframes animateCloud1 {
     0% {
-        margin-left: -500px;
+        margin-left: -800px;
     }
     100% {
         margin-left: 800px;
     }
 }
 
-@-webkit-keyframes animateCloud2 {
+@-webkit-keyframes ufo {
     0% {
         top: 100px;
         right: 50px;
@@ -263,7 +263,7 @@ ul {
     }
 }
 
-@-moz-keyframes animateCloud2 {
+@-moz-keyframes ufo {
     0% {
         top: 100px;
         right: 50px;
@@ -283,7 +283,7 @@ ul {
     }
 }
 
-@keyframes animateCloud2 {
+@keyframes ufo {
     0% {
         top: 100px;
         right: 50px;
@@ -308,7 +308,7 @@ ul {
         margin-left: -500px;
     }
     100% {
-        margin-left: 1000px;
+        margin-left: 1300px;
     }
 }
 
@@ -317,7 +317,7 @@ ul {
         margin-left: -500px;
     }
     100% {
-        margin-left: 1000px;
+        margin-left: 1300px;
     }
 }
 
@@ -326,7 +326,7 @@ ul {
         margin-left: -500px;
     }
     100% {
-        margin-left: 1000px;
+        margin-left: 1300px;
     }
 }
 
@@ -356,9 +356,9 @@ ul {
     width: 250px;
     height: 150px;
 
-    -webkit-animation: animateCloud2 25s linear infinite;
-	-moz-animation: animateCloud2 25s linear infinite;
-	animation: animateCloud2 25s linear infinite;
+    -webkit-animation: ufo 25s linear infinite;
+	-moz-animation: ufo 25s linear infinite;
+	animation: ufo 25s linear infinite;
 
 	-webkit-transform: scale(0.65);
 	-moz-transform: scale(0.65);
@@ -374,9 +374,9 @@ ul {
     width: 250px;
     height: 250px;
 
-    -webkit-animation: animateCloud3 15s linear infinite;
-	-moz-animation: animateCloud3 15s linear infinite;
-	animation: animateCloud3 15s linear infinite;
+    -webkit-animation: animateCloud3 19s linear infinite;
+	-moz-animation: animateCloud3 19s linear infinite;
+	animation: animateCloud3 19s linear infinite;
 
 	-webkit-transform: scale(0.65);
 	-moz-transform: scale(0.65);
