@@ -1,30 +1,21 @@
-body {
-
-}
+body {}
 
 .board {
-
     position: relative;
     overflow: hidden;
     width: 643px;
     height: 549px;
     border-radius: 10px;
-
 }
 
-.container{
+.container {}
 
-}
-
-.center{
+.center {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
-
-
 
 .tile {
     position: absolute;
@@ -44,12 +35,8 @@ body {
     background-color: #6699ff;
 }
 
-
-
-
-
-.start_game{
-    font-family: 'Anton', sans-serif;
+.start_game {
+    font-family: $btnFont;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -60,25 +47,15 @@ body {
     font-size: 1.50em;
     height: 31px;
     width: 25%;
-    background: #ff0000;
-    background-image: -webkit-linear-gradient(top, #ff0000, #b30000);
-    background-image: -moz-linear-gradient(top, #ff0000, #b30000);
-    background-image: -ms-linear-gradient(top, #ff0000, #b30000);
-    background-image: -o-linear-gradient(top, #ff0000, #b30000);
-    background-image: linear-gradient(to bottom, #ff0000, #b30000);
-    font-family: Arial;
+    @include sandardBtnGradient($btnColorLight,$btnColorDark);
     text-decoration: none;
 }
+
 .start_game:hover {
-    background: #b30000;
-    background-image: -webkit-linear-gradient(top, #b30000, #ff0000);
-    background-image: -moz-linear-gradient(top, #b30000, #ff0000);
-    background-image: -ms-linear-gradient(top, #b30000, #ff0000);
-    background-image: -o-linear-gradient(top, #b30000, #ff0000);
-    background-image: linear-gradient(to bottom, #b30000, #ff0000);
+    @include sandardBtnGradient($btnColorDark,$btnColorLight);
 }
 
-.moves{
+.moves {
     font-size: 2em;
-        font-family: 'Anton', sans-serif;
+    font-family: $mainFont;
 }
