@@ -130,7 +130,7 @@ console.log(tiles);
     }
 
     function tilesReset() {
-        takenTiles[0].css({'background-image':'url(../images/dna.png)'})
+            takenTiles[0].css({'background-image':'url(../images/dna.png)'})
         takenTiles[1].css({'background-image':'url(../images/dna.png)'})
         takenTiles= new Array();
         canTake = true;
